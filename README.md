@@ -9,12 +9,12 @@ A web application allowing users to upload images and have them classified into 
 Docker and Docker Compose installed on your machine.
 
 ### Steps
-1. Clone this repository:
-    `git clone <your-repository-url>`
-    `cd <project-folder>`
-2. Build and run the application using Docker Compose:
-    `docker compose build`
-    `docker compose up`
+1. Clone this repository:  
+    `git clone <your-repository-url>`  
+    `cd <project-folder>`  
+2. Build and run the application using Docker Compose:  
+    `docker compose build`  
+    `docker compose up`  
 3. Access the web interface:
 - Node.js Web Server: http://localhost:3000
 
