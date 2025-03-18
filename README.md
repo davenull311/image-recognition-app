@@ -10,15 +10,11 @@ Docker and Docker Compose installed on your machine.
 
 ### Steps
 1. Clone this repository:
-    <code>
-        git clone <your-repository-url>
-        cd <project-folder>
-    </code>
+    `git clone <your-repository-url>`
+    `cd <project-folder>`
 2. Build and run the application using Docker Compose:
-    <code>
-        docker compose build
-        docker compose up
-    </code>
+    `docker compose build`
+    `docker compose up`
 3. Access the web interface:
 - Node.js Web Server: http://localhost:3000
 
