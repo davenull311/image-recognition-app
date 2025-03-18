@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  ml-api:
+    build: ./ml-api
+    ports:
+      - "8000:8000"
+
+  web-server:
+    build: ./web-server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - ml-api

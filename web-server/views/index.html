@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Classification</title>
+</head>
+<body>
+    <h2>Upload an Image for Classification</h2>
+
+    <!-- Image upload form -->
+    <form id="uploadForm">
+        <input type="file" id="image" name="image" accept="image/*" required />
+        <button type="submit">Classify</button>
+    </form>
+
+    <!-- Area to display prediction results -->
+    <pre id="result"></pre>
+
+    <!-- JavaScript for form submission and result handling -->
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData();
+            formData.append('image', document.getElementById('image').files[0]);
+
+            // Send the image to the server and get predictions
+            const res = await fetch('/classify', { method: 'POST', body: formData });
+            const data = await res.json();
+
+            // Display the prediction results
+            document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+</body>
+</html>
