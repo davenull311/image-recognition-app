@@ -35,20 +35,20 @@ Docker and Docker Compose installed on your machine.
 I chose to use ResNet50 as the data model based on its reputation of performing exceptionally well on common object classes. Limitations quickly revealed themselves when I ran my profile image through it.  
 | Photo                                     | Results                                    |
 |-------------------------------------------|--------------------------------------------|
-| <img src="/images/photo.jpeg width="300"> | <img src="/images/results.png width="300"> |
+| <img src="/images/photo.jpeg" width="300"> | <img src="/images/results.png" width="300"> |
 
 
 ### Common limitations of ResNet50:
 1. Fixed Input Size and Color Channels:
-- Expects images of exactly 224x224 pixels and exactly 3 RGB channels.
-- Requires additional preprocessing to handle different sizes or transparency (alpha channel).
+    - Expects images of exactly 224x224 pixels and exactly 3 RGB channels.
+    - Requires additional preprocessing to handle different sizes or transparency (alpha channel).
 2. Predefined Categories (ImageNet Classes):
-- The model classifies images into 1000 categories defined by ImageNet.
-- If your images fall outside these categories or you require custom categories, the model won't provide meaningful results without additional training.
+    - The model classifies images into 1000 categories defined by ImageNet.
+    - If your images fall outside these categories or you require custom categories, the model won't provide meaningful results without additional training.
 3. Limited Generalization:
-- While ResNet50 performs exceptionally well on many common object classes, it may struggle with highly specialized, abstract, or unusual imagery.
+    - While ResNet50 performs exceptionally well on many common object classes, it may struggle with highly specialized, abstract, or unusual imagery.
 4. Computational Resources:
-- Relatively resource-intensive, requiring decent CPU/GPU memory and processing power.
+    - Relatively resource-intensive, requiring decent CPU/GPU memory and processing power.
 
 ### Alternatives and Enhancements:
 #### 🚀 Alternative Models:
