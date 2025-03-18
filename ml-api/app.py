@@ -23,8 +23,11 @@ async def predict(image: UploadFile = File(...)):
     # Read the uploaded image
     image_data = await image.read()
 
+    # Convert image to RGB explicitly to handle PNG (RGBA) images
+    img = Image.open(io.BytesIO(image_data)).convert('RGB')
     # Open and resize the image to 224x224 pixels (required input size for ResNet50)
-    img = Image.open(io.BytesIO(image_data)).resize((224, 224))
+    img = img.resize((224, 224))
+    
 
     # Convert image to numpy array and preprocess for model input
     img_array = np.array(img)[np.newaxis, ...]
